@@ -1,0 +1,26 @@
+:root {
+  /* palette */
+  --color-primary: #0a2540;
+  --color-accent: #ff6b35;
+  --color-bg: #fffaf3;
+  --color-text: #222;
+
+  /* alias зі старого файлу */
+  --gap: 16px;
+  --radius: 16px;
+  --bg: var(--color-bg);
+  --ink: var(--color-text);
+
+  /* scale */
+  --gap-xs: 8px;
+  --gap-sm: 12px;
+  --gap-md: 16px;
+  --gap-lg: 24px;
+  --gap-xl: 32px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
+}

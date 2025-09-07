@@ -1,0 +1,11 @@
+.section {
+  padding: 32px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}

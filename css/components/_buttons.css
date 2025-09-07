@@ -1,0 +1,11 @@
+.adopt-cta__btn {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #0a2540;
+  color: #fff;
+  text-decoration: none;
+}
+.adopt-cta__btn--light {
+  background: #fff;
+  color: #0a2540;
+}

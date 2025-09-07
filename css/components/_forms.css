@@ -1,0 +1,6 @@
+.input {
+  width: 100%;
+  padding: var(--gap-sm) var(--gap-md);
+  border: 1px solid #ddd;
+  border-radius: var(--radius-md);
+}

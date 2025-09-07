@@ -1,40 +1,147 @@
-<nav class="header__nav">
+<nav class="header__nav" role="navigation" aria-label="Primary">
   <div class="header__bar">
-    <a class="header__logo" href="index.html" aria-label="Monito home">
-      <img
-        class="header__logo-img"
-        width="96"
-        height="32"
-        src="img/global-header/wine-logo.svg"
-        alt="Monito logo"
-      />
+    <button
+      class="header__burger"
+      aria-label="Відкрити меню"
+      aria-controls="header-drawer"
+      aria-expanded="false"
+      type="button"
+    >
+      <svg class="header__burger-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+
+    <a class="header__logo" href="index.html" aria-label="Monito — Home">
+      <img class="header__logo-img" src="img/global-header/monito-logo.svg" width="108" height="32" alt="Monito logo" />
+      <span class="header__logo-tagline">Pets for Best</span>
     </a>
 
-    <ul class="header__menu">
-      <li class="header__menu-item">
-        <a class="header__menu-link" href="index.html#pets">Pets</a>
-      </li>
-      <li class="header__menu-item">
-        <a class="header__menu-link" href="index.html#products">Products</a>
-      </li>
-      <li class="header__menu-item">
-        <a class="header__menu-link" href="index.html#knowledge">Knowledge</a>
-      </li>
-      <li class="header__menu-item">
-        <a class="header__menu-link" href="contacts.html">Contact</a>
-      </li>
+    <ul class="header__menu" id="header-menu">
+      <li class="header__menu-item"><a class="header__menu-link" href="index.html">Home</a></li>
+      <li class="header__menu-item"><a class="header__menu-link" href="#products">Category</a></li>
+      <li class="header__menu-item"><a class="header__menu-link" href="#knowledge">About</a></li>
+      <li class="header__menu-item"><a class="header__menu-link" href="contacts.html">Contact</a></li>
     </ul>
 
+    <form class="header__search" role="search" aria-label="Site">
+      <label class="header__search-label" for="site-search">Пошук</label>
+      <span class="header__search-icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none" />
+          <path d="M21 21l-4.2-4.2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </span>
+      <input
+        class="header__search-input"
+        id="site-search"
+        name="q"
+        type="search"
+        placeholder="Search something here!"
+        autocomplete="off"
+      />
+    </form>
+
     <div class="header__actions">
-      <form class="header__search" role="search">
-        <input
-          class="header__search-input"
-          type="search"
-          placeholder="Пошук..."
-        />
-        <button class="header__search-btn" type="submit">Search</button>
-      </form>
       <a class="header__cta-btn" href="#adopt">Join the community</a>
+
+      <button class="header__currency" type="button" aria-haspopup="listbox" aria-expanded="false">
+        <img class="header__currency-flag" src="img/global-header/flag-vn.svg" width="16" height="16" alt="" />
+        <span class="header__currency-code">VND</span>
+        <svg class="header__caret" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <button class="header__search-toggle" type="button" aria-label="Пошук">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none" />
+          <path d="M21 21l-4.2-4.2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
     </div>
   </div>
+
+  <div class="header__drawer" id="header-drawer" hidden>
+    <div class="header__drawer-inner">
+      <form class="header__drawer-search" role="search" aria-label="Site">
+        <span class="header__search-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none" />
+            <path d="M21 21l-4.2-4.2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </span>
+        <input class="header__search-input" type="search" placeholder="Search something here!" />
+      </form>
+
+      <ul class="header__drawer-menu" role="list">
+        <li class="header__drawer-item"><a class="header__drawer-link" href="index.html">Home</a></li>
+        <li class="header__drawer-item"><a class="header__drawer-link" href="#products">Category</a></li>
+        <li class="header__drawer-item"><a class="header__drawer-link" href="#knowledge">About</a></li>
+        <li class="header__drawer-item"><a class="header__drawer-link" href="contacts.html">Contact</a></li>
+      </ul>
+
+      <div class="header__drawer-actions">
+        <a class="header__cta-btn header__cta-btn--block" href="#adopt">Join the community</a>
+        <div class="header__currency-list" role="listbox" aria-label="Валюта">
+          <button class="header__currency-option" role="option" aria-selected="true" data-code="VND" type="button">
+            <img src="img/global-header/flag-vn.svg" width="16" height="16" alt="" /> VND
+          </button>
+          <button class="header__currency-option" role="option" data-code="USD" type="button">
+            <img src="img/global-header/flag-us.svg" width="16" height="16" alt="" /> USD
+          </button>
+          <button class="header__currency-option" role="option" data-code="EUR" type="button">
+            <img src="img/global-header/flag-eu.svg" width="16" height="16" alt="" /> EUR
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="header__backdrop" type="button" hidden aria-label="Закрити меню"></button>
+
+  <script>
+    (function () {
+      const burger = document.querySelector(".header__burger");
+      const drawer = document.getElementById("header-drawer");
+      const backdrop = document.querySelector(".header__backdrop");
+      const searchToggle = document.querySelector(".header__search-toggle");
+
+      function openDrawer() {
+        drawer.hidden = false;
+        backdrop.hidden = false;
+        burger.setAttribute("aria-expanded", "true");
+        document.body.style.overflow = "hidden";
+      }
+      function closeDrawer() {
+        drawer.hidden = true;
+        backdrop.hidden = true;
+        burger.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      }
+
+      burger.addEventListener("click", () => {
+        const isOpen = burger.getAttribute("aria-expanded") === "true";
+        isOpen ? closeDrawer() : openDrawer();
+      });
+      backdrop.addEventListener("click", closeDrawer);
+
+      searchToggle?.addEventListener("click", () => {
+        openDrawer();
+        setTimeout(() => drawer.querySelector('input[type="search"]')?.focus(), 0);
+      });
+
+      document.querySelectorAll(".header__currency-option").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".header__currency-option").forEach((b) => b.setAttribute("aria-selected", "false"));
+          btn.setAttribute("aria-selected", "true");
+          const code = btn.dataset.code;
+          const flagSrc = btn.querySelector("img").getAttribute("src");
+          document.querySelector(".header__currency-code").textContent = code;
+          document.querySelector(".header__currency-flag").setAttribute("src", flagSrc);
+          closeDrawer();
+        });
+      });
+    })();
+  </script>
 </nav>

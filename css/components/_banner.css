@@ -1,0 +1,15 @@
+.promo {
+  padding: 24px;
+  background: radial-gradient(120% 120% at 100% 0%, #ffe7c7, #ffd9aa);
+}
+.promo__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 20px;
+  background: #0a2540;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
